@@ -12,6 +12,7 @@
                 <td>{{value.content}}</td>
             </tr>
         </table>
+        <button @click="write">글쓰기</button>
     </div>
 </template>
 <script>
@@ -22,6 +23,13 @@ export default {
        return {
            data: data
        }
-   }
+    },
+    methods:{
+        write() {
+            this.$router.push({
+                path: 'create'
+            })
+        }
+    }
 };
 </script>
